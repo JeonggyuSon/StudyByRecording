@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		25B79B4DC763BE388A798166 /* Pods_StudyByRecordingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2621D5414C5AE32240ABF40F /* Pods_StudyByRecordingTests.framework */; };
 		5656D1512130688C00334B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5656D1502130688C00334B7B /* AppDelegate.swift */; };
-		5656D1532130688C00334B7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5656D1522130688C00334B7B /* ViewController.swift */; };
+		5656D1532130688C00334B7B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5656D1522130688C00334B7B /* MainViewController.swift */; };
 		5656D1562130688C00334B7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5656D1542130688C00334B7B /* Main.storyboard */; };
 		5656D1592130688C00334B7B /* StudyByRecording.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5656D1572130688C00334B7B /* StudyByRecording.xcdatamodeld */; };
 		5656D15B2130688E00334B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5656D15A2130688E00334B7B /* Assets.xcassets */; };
@@ -43,7 +43,7 @@
 		31D7BFF53A5F810218B937DF /* Pods-StudyByRecording.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyByRecording.release.xcconfig"; path = "Target Support Files/Pods-StudyByRecording/Pods-StudyByRecording.release.xcconfig"; sourceTree = "<group>"; };
 		5656D14D2130688C00334B7B /* StudyByRecording.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyByRecording.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5656D1502130688C00334B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5656D1522130688C00334B7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5656D1522130688C00334B7B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5656D1552130688C00334B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5656D1582130688C00334B7B /* StudyByRecording.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyByRecording.xcdatamodel; sourceTree = "<group>"; };
 		5656D15A2130688E00334B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				5656D1812130712300334B7B /* Supporting Files */,
-				5656D1522130688C00334B7B /* ViewController.swift */,
+				5656D1522130688C00334B7B /* MainViewController.swift */,
 				5656D1542130688C00334B7B /* Main.storyboard */,
 			);
 			path = StudyByRecording;
@@ -187,6 +187,7 @@
 				5656D1492130688C00334B7B /* Sources */,
 				5656D14A2130688C00334B7B /* Frameworks */,
 				5656D14B2130688C00334B7B /* Resources */,
+				41A9754FDFEDFB33288CB4B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,6 +307,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		41A9754FDFEDFB33288CB4B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StudyByRecording/Pods-StudyByRecording-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StudyByRecording/Pods-StudyByRecording-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7315E09282C146BDDCAE8535 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,7 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5656D1532130688C00334B7B /* ViewController.swift in Sources */,
+				5656D1532130688C00334B7B /* MainViewController.swift in Sources */,
 				5656D1512130688C00334B7B /* AppDelegate.swift in Sources */,
 				5656D1592130688C00334B7B /* StudyByRecording.xcdatamodeld in Sources */,
 			);
@@ -545,7 +568,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = WW36JG8F95;
-				INFOPLIST_FILE = StudyByRecording/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/StudyByRecording/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -568,7 +591,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = WW36JG8F95;
-				INFOPLIST_FILE = StudyByRecording/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/StudyByRecording/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
