@@ -40,6 +40,8 @@ class MainViewController: UIViewController {
     
     @IBAction func stopRecord(_ sender: UIButton) {
         stopRecording()
+        
+        API.shared.request(input: text.text!)
     }
     
     override func viewDidLoad() {
